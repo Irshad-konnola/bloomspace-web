@@ -1,75 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import PremiumButton from "../shared/PremiumButton";
 import { trackSnapEvent } from "@/lib/tracking/snap-pixel";
 
 export default function Hero() {
   const handleCTAClick = () => {
-    // Fire Snapchat Pixel event when the user clicks the CTA
-    trackSnapEvent("VIEW_CONTENT", { content_name: "Hero CTA - Get a Consultation" });
+    trackSnapEvent("VIEW_CONTENT", {
+      content_name: "Hero CTA - View Portfolio",
+    });
   };
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Image with Aceternity-style subtle scale animation */}
-      <motion.div 
+    <section className="relative h-svh w-full flex items-end pb-24 md:pb-32 overflow-hidden">
+      {/* Immersive Image Reveal */}
+      <motion.div
         className="absolute inset-0 z-0"
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        initial={{ scale: 1.15, filter: "blur(10px)" }}
+        animate={{ scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="absolute inset-0 bg-black/40 z-10" /> {/* Premium dark overlay */}
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-black/80 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2874&auto=format&fit=crop"
+          src="/assets/landing.jpg"
           alt="Luxury Interior Design"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
-      {/* Content */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        >
-          <span className="text-brand-secondary font-medium tracking-[0.2em] uppercase text-sm mb-6 block">
-            Redefining Spaces
-          </span>
-        </motion.div>
-
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-heading text-white font-bold tracking-tighter mb-6 max-w-4xl"
-        >
-          Elevate Your <br className="hidden md:block" /> Living Experience.
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="text-gray-200 text-lg md:text-xl max-w-2xl mb-10 font-light"
-        >
-          We craft bespoke, timeless interiors that perfectly blend aesthetics with unparalleled functionality.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-        >
-          <Link
-            href="/contact"
-            onClick={handleCTAClick}
-            className="group relative inline-flex items-center justify-center px-8 py-4 font-medium text-white bg-brand-primary overflow-hidden rounded-md transition-all hover:scale-105 active:scale-95"
+      {/* Asymmetrical Content */}
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div className="max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="overflow-hidden mb-6"
           >
-            <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-10"></span>
-            <span className="relative">Get a Consultation</span>
-          </Link>
+            <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-heading text-white font-medium tracking-tighter leading-[1.1]">
+              Architecture of <br className="hidden md:block" />
+              <span className="italic text-white/80">Atmosphere.</span>
+            </h1>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-start md:items-end gap-6"
+        >
+          <p className="text-gray-100 text-sm md:text-base max-w-sm md:text-right font-light leading-relaxed">
+            Curating bespoke environments that blend timeless elegance with
+            uncompromising functionality for the modern lifestyle.
+          </p>
+          <PremiumButton href="/gallery" onClick={handleCTAClick}>
+            Explore Portfolio
+          </PremiumButton>
         </motion.div>
       </div>
     </section>

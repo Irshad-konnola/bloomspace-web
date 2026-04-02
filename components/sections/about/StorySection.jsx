@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionWrapper from "../../layout/SectionWrapper";
+import Image from "next/image";
 
 export default function StorySection() {
   return (
@@ -22,7 +23,7 @@ export default function StorySection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-lg text-muted-foreground leading-relaxed"
           >
-            Since 2010, Lumière has been at the forefront of luxury interior design, transforming ordinary rooms into extraordinary living experiences.
+            Since 2023, Bloom Space has been at the forefront of luxury interior design, transforming ordinary rooms into extraordinary living experiences.
           </motion.p>
         </div>
 
@@ -32,12 +33,13 @@ export default function StorySection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[600px] rounded-xl overflow-hidden"
+            className="relative h-150 rounded-xl overflow-hidden"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=2832&auto=format&fit=crop" 
+            <Image 
+              src="/assets/about/cover.jpg" 
               alt="Our Studio" 
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0  object-cover"
+              fill
             />
             <div className="absolute inset-0 bg-brand-primary/10 mix-blend-multiply" />
           </motion.div>
@@ -52,8 +54,7 @@ export default function StorySection() {
             <div>
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">Our Story</h3>
               <p className="text-muted-foreground leading-relaxed">
-                What started as a small boutique studio in New York has grown into a globally recognized design firm. We believe that true luxury lies in the details—the subtle textures, the perfect lighting, and the seamless flow of a beautifully planned space.
-              </p>
+We are a team of highly experienced designers, skilled carpenters, tailors, and fabric specialists dedicated to delivering exceptional interior solutions. With a strong focus on craftsmanship and precision, we ensure that every detail is carefully executed to perfection. Our approach combines creativity, technical expertise, and a deep understanding of client preferences to create spaces that are both functional and visually refined. We believe that excellence lies in the details—and we never miss one.              </p>
             </div>
             
             <div className="pl-6 border-l-2 border-brand-primary">

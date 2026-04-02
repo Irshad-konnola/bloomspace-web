@@ -10,7 +10,7 @@ const testimonials = [
     id: 1,
     name: "Sarah Jenkins",
     role: "Homeowner",
-    text: "Lumière completely transformed our living space. Their attention to detail and ability to capture our personal style while elevating it to a magazine-worthy level was truly astounding.",
+    text: "Bloom Space completely transformed our living space. Their attention to detail and ability to capture our personal style while elevating it to a magazine-worthy level was truly astounding.",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <Quote className="w-16 h-16 text-brand-primary/20 mx-auto mb-8 transform rotate-180" />
         
-        <div className="relative min-h-[250px] flex items-center justify-center">
+        <div className="relative min-h-62.5 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}

@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata = {
-  title: "Lumière | Premium Interior Design",
+  title: "Bloomspace | Premium Interior Design",
   description: "High-end, elegant interior design for residential and commercial spaces.",
 };
 
