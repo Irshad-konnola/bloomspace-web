@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏡 BloomSpace – Interior Design Website
 
-## Getting Started
+A premium, modern frontend website built for an interior design company, focused on clean UI, smooth animations, and conversion-driven design.
 
-First, run the development server:
+🔗 **Live Demo**: https://illustrious-meringue-b785af.netlify.app/  
+
+---
+
+## ✨ Overview
+
+BloomSpace is a high-quality multi-page website designed to showcase interior design services and projects with a strong focus on visual aesthetics and user experience.
+
+This project emphasizes:
+- Clean and modern UI
+- Smooth user interactions
+- Performance and responsiveness
+- Lead generation
+
+---
+
+## 🚀 Features
+
+- 🏡 Multi-page layout (Home, About, Services, Gallery, Contact)
+- 🎨 Premium and modern UI design
+- 🎬 Smooth animations using Framer Motion
+- 🧩 Reusable components with shadcn/ui
+- 📱 Fully responsive across all devices
+- 📩 Contact form powered by Netlify Forms
+- 📊 Snapchat Pixel integration for tracking
+- ⚡ Optimized performance with Next.js
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 16  
+- **Frontend:** React 19  
+- **Styling:** Tailwind CSS 4  
+- **UI Components:** shadcn/ui + Radix UI  
+- **Animations:** Framer Motion  
+- **Icons:** Lucide React + Phosphor Icons  
+- **Forms:** Netlify Forms  
+- **Tracking:** Snapchat Pixel  
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home](./public/screenshots/home.png)
+
+### 🛋️ Services Page
+![Services](./public/screenshots/projects.png)
+
+### 🖼️ Gallery
+![Gallery](./public/screenshots/services.png)
+
+### 📩 Contact Page
+![Contact](./public/screenshots/contact.png)
+
+---
+
+## 📂 Project Structure
+
+
+/app (or pages)
+/components
+/lib
+/public
+
+
+---
+
+## ⚙️ Installation & Setup
 
 ```bash
+git clone https://github.com/Irshad-konnola/bloomspace-web.git
+cd bloomspace-web
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎯 Key Highlights
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Built for a real-world freelance client
+Focused on conversion and lead generation
+Clean, scalable frontend architecture
+Smooth animations and premium UI experience
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📊 Performance
 
-## Learn More
+⚡ Fast loading and optimized UI
+📱 Mobile-first responsive design
+🎯 UX-focused layout and structure
+🧠 Concept
 
-To learn more about Next.js, take a look at the following resources:
+Designed to reflect a premium interior design brand, using clean layouts, strong typography, and smooth motion to create an engaging user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🚧 Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🚧 95% Complete
 
-## Deploy on Vercel
+👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Irshad
+Frontend Developer (React / Next.js)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+LinkedIn: https://www.linkedin.com/in/irshad-konnola-954516226
+Email: irshadkonnola.dev@gmail.com
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!

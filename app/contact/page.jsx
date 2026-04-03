@@ -1,7 +1,6 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import ContactForm from "@/components/forms/ContactForm";
-
 export const metadata = {
   title: "Contact Us | Bloomspace Interiors",
   description: "Get in touch with Bloomspace Interiors to start planning your next luxury design project.",
