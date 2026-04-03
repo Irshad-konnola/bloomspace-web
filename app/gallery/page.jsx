@@ -3,21 +3,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ZoomIn } from "lucide-react";
+import Image from "next/image";
 import SectionWrapper from "@/components/layout/SectionWrapper";
 import Lightbox from "@/components/shared/LightBox";
 
 const categories = ["All", "Residential", "Commercial", "Custom"];
 
 const galleryItems = [
-  { id: 1, category: "Residential", title: "Soho Penthouse", src: "https://images.unsplash.com/photo-1600210491369-e753d80a41f3?q=80&w=2874&auto=format&fit=crop" },
-  { id: 2, category: "Commercial", title: "Creative Agency HQ", src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2869&auto=format&fit=crop" },
-  { id: 3, category: "Residential", title: "Modern Minimalist Villa", src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2940&auto=format&fit=crop" },
-  { id: 4, category: "Custom", title: "Bespoke Walnut Dining", src: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2938&auto=format&fit=crop" },
-  { id: 5, category: "Residential", title: "Coastal Retreat", src: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop" },
-  { id: 6, category: "Commercial", title: "The Artisan Boutique", src: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2940&auto=format&fit=crop" },
-  { id: 7, category: "Residential", title: "Urban Loft", src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2940&auto=format&fit=crop" },
-  { id: 8, category: "Custom", title: "Marble Kitchen Island", src: "https://images.unsplash.com/photo-1556910103-1c02745a872f?q=80&w=2940&auto=format&fit=crop" },
-  { id: 9, category: "Residential", title: "Mid-Century Modern", src: "https://images.unsplash.com/photo-1583847268964-b28ce8fde4f8?q=80&w=2787&auto=format&fit=crop" },
+  { id: 1, category: "Residential", title: "Soho Penthouse", src: "/assets/gallery/gallery-1.jpg" },
+  { id: 2, category: "Commercial", title: "Creative Agency HQ", src: "/assets/gallery/gallery-2.jpg" },
+  { id: 3, category: "Residential", title: "Modern Minimalist Villa", src: "/assets/gallery/gallery-3.jpg" },
+  { id: 4, category: "Custom", title: "Bespoke Walnut Dining", src: "/assets/gallery/gallery-4.jpg" },
+  { id: 5, category: "Residential", title: "Coastal Retreat", src: "/assets/gallery/gallery-5.jpg" },
+  { id: 6, category: "Commercial", title: "The Artisan Boutique", src: "/assets/gallery/gallery-6.jpg" },
+  { id: 7, category: "Residential", title: "Urban Loft", src: "/assets/gallery/gallery-7.jpg" },
+  { id: 8, category: "Custom", title: "Marble Kitchen Island", src: "/assets/services/kitchen.jpg" },
+  { id: 9, category: "Residential", title: "Mid-Century Modern", src: "/assets/gallery/gallery-9.jpg" },
 ];
 
 export default function GalleryGrid() {
@@ -70,7 +71,7 @@ export default function GalleryGrid() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence>
-            {filteredItems.map((item) => (
+            {filteredItems.map((item, index) => (
               <motion.div
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -78,18 +79,25 @@ export default function GalleryGrid() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 key={item.id}
-                className="group relative aspect-4/5 overflow-hidden rounded-xl bg-muted cursor-pointer"
+                className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-muted cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
-                <img
+                {/* OPTIMIZED IMAGE COMPONENT:
+                  1. 'fill' adapts to the parent motion.div aspect ratio.
+                  2. 'sizes' tells the browser exactly what resolution to download based on screen size.
+                  3. 'priority' ensures the top row (first 3 images) is preloaded instantly so it never flashes blank.
+                */}
+                <Image
                   src={item.src}
                   alt={item.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={index < 3} 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center z-10 pointer-events-none">
                   <ZoomIn className="w-10 h-10 text-white/80 mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300" />
                   <span className="text-brand-secondary text-xs tracking-widest uppercase mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
                     {item.category}
