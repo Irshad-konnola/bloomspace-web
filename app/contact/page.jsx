@@ -3,8 +3,8 @@ import SectionWrapper from "@/components/layout/SectionWrapper";
 import ContactForm from "@/components/forms/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Lumière Interiors",
-  description: "Get in touch with Lumière Interiors to start planning your next luxury design project.",
+  title: "Contact Us | Bloomspace Interiors",
+  description: "Get in touch with Bloomspace Interiors to start planning your next luxury design project.",
 };
 
 export default function ContactPage() {
