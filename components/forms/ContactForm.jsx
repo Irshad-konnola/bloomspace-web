@@ -82,13 +82,11 @@ export default function ContactForm() {
   }
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
-      name="contact" 
-      data-netlify="true" 
-      netlify-honeypot="bot-field"
-      className="space-y-6 bg-white p-8 md:p-10 rounded-xl shadow-sm border border-border"
-    >
+   <form 
+  onSubmit={handleSubmit} 
+  name="contact" 
+  className="space-y-6 bg-white p-8 md:p-10 rounded-xl shadow-sm border border-border"
+>
       {/* Hidden input required by Netlify to route the form */}
       <input type="hidden" name="form-name" value="contact" />
       
