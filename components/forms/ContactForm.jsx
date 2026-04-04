@@ -20,7 +20,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
@@ -29,12 +29,17 @@ export default function ContactForm() {
       // 1. Format data for Netlify Forms
       const formSubmission = new URLSearchParams();
       formSubmission.append("form-name", "contact");
+      
+      // CRITICAL FIX 1: Explicitly pass the empty honeypot field so Netlify knows it's not a bot
+      formSubmission.append("bot-field", ""); 
+
       Object.entries(formData).forEach(([key, value]) => {
         formSubmission.append(key, value);
       });
 
-      // 2. Submit via fetch to prevent page reload
-      const response = await fetch("/", {
+      // CRITICAL FIX 2: Point the fetch directly to your hidden HTML file instead of "/"
+      // (If you named your file something other than "hidden-forms.html", use that exact name here)
+      const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formSubmission.toString(),
