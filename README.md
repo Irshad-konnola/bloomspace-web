@@ -49,10 +49,10 @@ This project emphasizes:
 ### 🏠 Home Page
 ![Home](./public/screenshots/home.png)
 
-### 🛋️ Services Page
+### 🛋️ Featured Projects Preview
 ![Services](./public/screenshots/projects.png)
 
-### 🖼️ Gallery
+### 🖼️ Services Page
 ![Gallery](./public/screenshots/services.png)
 
 ### 📩 Contact Page
