@@ -20,40 +20,80 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- const handleSubmit = async (e) => {
+//  const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+//     setError("");
+
+//     try {
+//       // 1. Format data for Netlify Forms
+//       const formSubmission = new URLSearchParams();
+//       formSubmission.append("form-name", "contact");
+      
+//       // CRITICAL FIX 1: Explicitly pass the empty honeypot field so Netlify knows it's not a bot
+//       formSubmission.append("bot-field", ""); 
+
+//       Object.entries(formData).forEach(([key, value]) => {
+//         formSubmission.append(key, value);
+//       });
+
+//       // CRITICAL FIX 2: Point the fetch directly to your hidden HTML file instead of "/"
+//       // (If you named your file something other than "hidden-forms.html", use that exact name here)
+//       const response = await fetch("/netlify-forms", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: formSubmission.toString(),
+//       });
+
+//       if (!response.ok) throw new Error("Network response was not ok");
+
+//       // 3. Fire Snapchat Pixel on successful lead submission
+//       trackSnapEvent("SIGN_UP", { 
+//         content_category: "Lead Generation",
+//         content_name: "Contact Form Submission"
+//       });
+
+//       // 4. Update UI State
+//       setIsSubmitted(true);
+//       setFormData({ name: "", email: "", phone: "", message: "" });
+//     } catch (err) {
+//       console.error("Form submission error:", err);
+//       setError("Something went wrong. Please try again later.");
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
+
+const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError("");
 
     try {
-      // 1. Format data for Netlify Forms
-      const formSubmission = new URLSearchParams();
-      formSubmission.append("form-name", "contact");
+      // 1. Grab the native HTML form data directly from the DOM
+      // This automatically captures your hidden form-name, bot-field, and all inputs!
+      const formElement = e.target;
+      const formData = new FormData(formElement);
       
-      // CRITICAL FIX 1: Explicitly pass the empty honeypot field so Netlify knows it's not a bot
-      formSubmission.append("bot-field", ""); 
+      // 2. Format it exactly how Netlify's servers expect
+      const urlEncodedData = new URLSearchParams(formData).toString();
 
-      Object.entries(formData).forEach(([key, value]) => {
-        formSubmission.append(key, value);
-      });
-
-      // CRITICAL FIX 2: Point the fetch directly to your hidden HTML file instead of "/"
-      // (If you named your file something other than "hidden-forms.html", use that exact name here)
-      const response = await fetch("/netlify-forms", {
+      // 3. Pro-Trick: POST to a guaranteed static route to bypass Next.js routing conflicts
+      const response = await fetch("/favicon.ico", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formSubmission.toString(),
+        body: urlEncodedData,
       });
 
       if (!response.ok) throw new Error("Network response was not ok");
 
-      // 3. Fire Snapchat Pixel on successful lead submission
+      // 4. Fire Snapchat Pixel on successful lead submission
       trackSnapEvent("SIGN_UP", { 
         content_category: "Lead Generation",
         content_name: "Contact Form Submission"
       });
 
-      // 4. Update UI State
+      // 5. Update UI State
       setIsSubmitted(true);
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
