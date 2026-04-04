@@ -39,7 +39,7 @@ export default function ContactForm() {
 
       // CRITICAL FIX 2: Point the fetch directly to your hidden HTML file instead of "/"
       // (If you named your file something other than "hidden-forms.html", use that exact name here)
-      const response = await fetch("/netlify-forms.html", {
+      const response = await fetch("/netlify-forms", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formSubmission.toString(),
