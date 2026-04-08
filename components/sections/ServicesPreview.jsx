@@ -6,20 +6,20 @@ import Link from "next/link";
 import SectionWrapper from "../layout/SectionWrapper";
 import Image from "next/image";
 const servicesList = [
-  {
-    title: "Modern Kitchens",
-    number: "01",
-    image: "/assets/services/kitchen.jpg",
-  },
+ 
   {
     title: "Custom Wardrobes",
-    number: "02",
+    number: "01",
     image: "/assets/services/wardrobe.jpg",
   },
   {
     title: "Curtains & Blinds",
-    number: "03",
+    number: "02",
     image: "/assets/services/curtains.jpg",
+  }, {
+    title: "Modern Kitchens",
+    number: "03",
+    image: "/assets/services/kitchen.jpg",
   },
   {
     title: "Custom Sofas",

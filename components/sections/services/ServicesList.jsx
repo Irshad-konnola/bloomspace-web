@@ -16,18 +16,25 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const services = [
+   {
+    title: "Wardrobes",
+    description: "Minimal, sleek, and intelligently designed wardrobes tailored to your space. We create fully customized cupboard solutions with smart storage accessories, premium finishes, and flexible designs — all aligned with your budget and lifestyle.",
+    icon: LayoutGrid,
+    image: "/assets/services/wardrobe.jpg",
+  },
+  {
+    title: "Curtains & Blinds",
+    description: "Elevate your interiors with premium yet affordable curtain solutions. We offer artistic tailoring, high-quality railing systems, and a wide range of fabric options to match every design theme. Upgrade to advanced Italian motorized systems with up to 15 years warranty for effortless luxury.",
+    icon: Blinds,
+    image: "/assets/services/curtains.jpg",
+  },
   {
     title: "Kitchen",
     description: "Modern kitchens designed for functionality and style. We offer fully customized kitchen solutions with a wide variety of materials, finishes, and smart accessories to maximize space and efficiency. From contemporary to classic designs, we deliver durable, elegant kitchens tailored to your needs and budget.",
     icon: Utensils,
     image: "/assets/services/kitchen.jpg",
   },
-  {
-    title: "Wardrobes",
-    description: "Minimal, sleek, and intelligently designed wardrobes tailored to your space. We create fully customized cupboard solutions with smart storage accessories, premium finishes, and flexible designs — all aligned with your budget and lifestyle.",
-    icon: LayoutGrid,
-    image: "/assets/services/wardrobe.jpg",
-  },
+ 
   {
     title: "Custom Sofas",
     description: "Designed for comfort and crafted for style. Our customized sofas blend modern aesthetics with durable materials, giving you the perfect balance of elegance, functionality, and long-lasting quality.",
@@ -40,12 +47,7 @@ const services = [
     icon: Tv,
     image: "/assets/services/tv unit.jpg",
   },
-  {
-    title: "Curtains & Blinds",
-    description: "Elevate your interiors with premium yet affordable curtain solutions. We offer artistic tailoring, high-quality railing systems, and a wide range of fabric options to match every design theme. Upgrade to advanced Italian motorized systems with up to 15 years warranty for effortless luxury.",
-    icon: Blinds,
-    image: "/assets/services/curtains.jpg",
-  },
+  
   {
     title: "Wall Paneling",
     description: "Transform plain walls into statement features. Our modern wall paneling solutions add depth, texture, and sophistication, using high-quality materials and flawless finishing techniques.",

@@ -49,10 +49,12 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-3 text-sm text-brand-secondary/80">
-              <li>123 Design Studio Lane</li>
-              <li>Creative District, NY 10001</li>
-              <li className="pt-2">hello@lumiereinteriors.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>122 Al Hurouf St,</li>
+              <li>Al Shamkhah, Abudhabi,UAE</li>
+              <li className="pt-2">bloomspace@gmail.com</li>
+              <li>0505 13 5201</li>
+              <li>0505 13 5291</li>
+              <li>0505 13 5743</li>
             </ul>
           </div>
         </div>

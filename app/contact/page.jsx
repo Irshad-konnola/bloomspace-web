@@ -42,9 +42,8 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Visit Our Studio</h4>
                     <p className="text-muted-foreground text-sm">
-                      123 Design Studio Lane<br />
-                      Creative District, NY 10001
-                    </p>
+                      122 Al Hurouf St,<br />
+Al Shamkhah, Abudhabi,UAE                    </p>
                   </div>
                 </div>
 
@@ -55,8 +54,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Email Us</h4>
                     <p className="text-muted-foreground text-sm">
-                      hello@lumiereinteriors.com<br />
-                      press@lumiereinteriors.com
+                     bloomspace@gmail.com<br />
                     </p>
                   </div>
                 </div>
@@ -68,8 +66,9 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Call Us</h4>
                     <p className="text-muted-foreground text-sm">
-                      +1 (555) 123-4567<br />
-                      Mon-Fri, 9am - 6pm EST
+                      0505 13 5201<br />
+                      0505 13 5291<br/>
+                      0505 13 5743
                     </p>
                   </div>
                 </div>
