@@ -10,15 +10,15 @@ import Lightbox from "@/components/shared/LightBox";
 const categories = ["All", "Residential", "Commercial", "Custom"];
 
 const galleryItems = [
-  { id: 1, category: "Residential", title: "Soho Penthouse", src: "/assets/gallery/gallery-1.jpg" },
-  { id: 2, category: "Commercial", title: "Creative Agency HQ", src: "/assets/gallery/gallery-2.jpg" },
-  { id: 3, category: "Residential", title: "Modern Minimalist Villa", src: "/assets/gallery/gallery-3.jpg" },
-  { id: 4, category: "Custom", title: "Bespoke Walnut Dining", src: "/assets/gallery/gallery-4.jpg" },
-  { id: 5, category: "Residential", title: "Coastal Retreat", src: "/assets/gallery/gallery-5.jpg" },
-  { id: 6, category: "Commercial", title: "The Artisan Boutique", src: "/assets/gallery/gallery-6.jpg" },
-  { id: 7, category: "Residential", title: "Urban Loft", src: "/assets/gallery/gallery-7.jpg" },
-  { id: 8, category: "Custom", title: "Marble Kitchen Island", src: "/assets/services/kitchen.jpg" },
-  { id: 9, category: "Residential", title: "Mid-Century Modern", src: "/assets/gallery/gallery-9.jpg" },
+  { id: 1, category: "Residential", title: "Soho Penthouse", src: "/assets/gallery/gallery-1-new.jpeg" },
+  { id: 2, category: "Commercial", title: "Creative Agency HQ", src: "/assets/gallery/gallery-2-new.jpeg" },
+  { id: 3, category: "Residential", title: "Modern Minimalist Villa", src: "/assets/gallery/gallery-3-new.jpeg" },
+  { id: 4, category: "Custom", title: "Bespoke Walnut Dining", src: "/assets/gallery/gallery-4-new.jpeg" },
+  { id: 5, category: "Residential", title: "Coastal Retreat", src: "/assets/gallery/gallery-5-new.jpeg" },
+  { id: 6, category: "Commercial", title: "The Artisan Boutique", src: "/assets/gallery/gallery-6-new.jpeg" },
+  { id: 7, category: "Residential", title: "Urban Loft", src: "/assets/gallery/gallery-7-new.jpeg" },
+  { id: 8, category: "Custom", title: "Marble Kitchen Island", src: "/assets/gallery/gallery-8-new.jpeg" },
+  { id: 9, category: "Residential", title: "Mid-Century Modern", src: "/assets/gallery/gallery-9-new.jpeg" },
 ];
 
 export default function GalleryGrid() {

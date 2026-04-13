@@ -14,8 +14,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const SNAP_PIXEL_ID = "YOUR_PIXEL_ID"; // Replace with actual pixel ID
-
+const SNAP_PIXEL_ID = process.env.NEXT_PUBLIC_SNAP_PIXEL_ID;
   return (
     <html lang="en" className="scroll-smooth">
       <head>
