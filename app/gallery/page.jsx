@@ -79,14 +79,10 @@ export default function GalleryGrid() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
                 key={item.id}
-                className="group relative aspect-[4/5] overflow-hidden rounded-xl bg-muted cursor-pointer"
+                className="group relative aspect-4/5 overflow-hidden rounded-xl bg-muted cursor-pointer"
                 onClick={() => setSelectedImage(item)}
               >
-                {/* OPTIMIZED IMAGE COMPONENT:
-                  1. 'fill' adapts to the parent motion.div aspect ratio.
-                  2. 'sizes' tells the browser exactly what resolution to download based on screen size.
-                  3. 'priority' ensures the top row (first 3 images) is preloaded instantly so it never flashes blank.
-                */}
+                
                 <Image
                   src={item.src}
                   alt={item.title}
