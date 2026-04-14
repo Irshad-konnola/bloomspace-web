@@ -22,7 +22,7 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-black/80 z-10" />
         <img
-          src="/assets/landing.jpg"
+          src="/assets/gallery/gallery-1-new.jpeg"
           alt="Luxury Interior Design"
           className="w-full h-full object-cover"
         />

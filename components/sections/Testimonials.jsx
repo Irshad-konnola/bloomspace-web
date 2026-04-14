@@ -8,22 +8,28 @@ import SectionWrapper from "../layout/SectionWrapper";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    role: "Homeowner",
-    text: "Bloom Space completely transformed our living space. Their attention to detail and ability to capture our personal style while elevating it to a magazine-worthy level was truly astounding.",
+    name: "Fatima Shaima",
+    role: "Homeowner, Riyadh",
+    text: "Absolutely thrilled with our new kitchen! 🌟 The team at Bloom Space transformed our outdated cooking area into a modern masterpiece. Their attention to detail in the custom cabinetry and layout planning is unmatched. Highly recommend them! 💯",
   },
   {
     id: 2,
-    name: "David Chen",
-    role: "CEO, TechFlow",
-    text: "Designing our new corporate headquarters was a massive undertaking. The team delivered an inspiring workspace that our employees love, perfectly balancing aesthetics with functional ergonomics.",
+    name: "Wael Ahmed",
+    role: "Villa Owner, Jeddah",
+    text: "Amazing perfection! ✨ This is the only way to describe the creative work done by the Bloom Space Interior team. From the most precise initial measurements to the final touches of installation, the service was flawless. 👌 Wow, the custom curtains made a huge difference, beautifying my entire home and adding a touch of luxury. 🏠💖",
   },
   {
     id: 3,
-    name: "Elena Rodriguez",
-    role: "Boutique Owner",
-    text: "The custom furniture and lighting choices created an atmosphere in my store that instantly increased our foot traffic and dwell time. Worth every penny of the investment.",
+    name: "Aisha Farhana",
+    role: "Homeowner, Dammam",
+    text: "I couldn't be happier with the custom wardrobes installed in our master bedroom. The storage solutions are both elegant and highly functional. 👗👔 The installation team was incredibly professional, clean, and finished right on schedule. Thank you, Bloom Space! 🙏",
   },
+  {
+    id: 4,
+    name: "Marwan Alzabi",
+    role: "Managing Director, Riyadh",
+    text: "Bloom Space did an incredible job upgrading our corporate office! 🏢 The automated blinds they installed give us the perfect balance of natural light and privacy for the glass meeting rooms. We also had them design sleek storage units and a modern kitchenette for the staff breakroom. Professional team and on-time delivery! 💼🤝 Highly recommended for commercial spaces.",
+  }
 ];
 
 export default function Testimonials() {

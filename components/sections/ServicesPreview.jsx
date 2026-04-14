@@ -10,16 +10,16 @@ const servicesList = [
   {
     title: "Custom Wardrobes",
     number: "01",
-    image: "/assets/services/wardrobe.jpg",
+    image: "/assets/gallery/gallery-6-new.jpeg",
   },
   {
     title: "Curtains & Blinds",
     number: "02",
-    image: "/assets/services/curtains.jpg",
+    image: "/assets/gallery/gallery-4-new.jpeg",
   }, {
     title: "Modern Kitchens",
     number: "03",
-    image: "/assets/services/kitchen.jpg",
+    image: "/assets/gallery/gallery-9-new.jpeg",
   },
   {
     title: "Custom Sofas",

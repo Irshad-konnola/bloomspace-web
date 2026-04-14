@@ -66,7 +66,7 @@ export default function AboutPreview() {
               className="absolute inset-0"
             >
               <Image
-                src="/assets/about-preview.jpg"
+                src="/assets/gallery/gallery-2-new.jpeg"
                 alt="Minimalist Living Space"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
