@@ -9,25 +9,25 @@ const testimonials = [
   {
     id: 1,
     name: "Fatima Shaima",
-    role: "Homeowner, Riyadh",
+    role: "Homeowner,Riyadh City ",
     text: "Absolutely thrilled with our new kitchen! 🌟 The team at Bloom Space transformed our outdated cooking area into a modern masterpiece. Their attention to detail in the custom cabinetry and layout planning is unmatched. Highly recommend them! 💯",
   },
   {
     id: 2,
     name: "Wael Ahmed",
-    role: "Villa Owner, Jeddah",
+    role: "Villa Owner, Al Shawamekh",
     text: "Amazing perfection! ✨ This is the only way to describe the creative work done by the Bloom Space Interior team. From the most precise initial measurements to the final touches of installation, the service was flawless. 👌 Wow, the custom curtains made a huge difference, beautifying my entire home and adding a touch of luxury. 🏠💖",
   },
   {
     id: 3,
     name: "Aisha Farhana",
-    role: "Homeowner, Dammam",
+    role: "Homeowner, Al Falah",
     text: "I couldn't be happier with the custom wardrobes installed in our master bedroom. The storage solutions are both elegant and highly functional. 👗👔 The installation team was incredibly professional, clean, and finished right on schedule. Thank you, Bloom Space! 🙏",
   },
   {
     id: 4,
     name: "Marwan Alzabi",
-    role: "Managing Director, Riyadh",
+    role: "Managing Director, Shakhbout City",
     text: "Bloom Space did an incredible job upgrading our corporate office! 🏢 The automated blinds they installed give us the perfect balance of natural light and privacy for the glass meeting rooms. We also had them design sleek storage units and a modern kitchenette for the staff breakroom. Professional team and on-time delivery! 💼🤝 Highly recommended for commercial spaces.",
   }
 ];

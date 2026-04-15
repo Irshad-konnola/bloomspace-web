@@ -20,32 +20,32 @@ const services = [
     title: "Wardrobes",
     description: "Minimal, sleek, and intelligently designed wardrobes tailored to your space. We create fully customized cupboard solutions with smart storage accessories, premium finishes, and flexible designs — all aligned with your budget and lifestyle.",
     icon: LayoutGrid,
-    image: "/assets/services/wardrobe.jpg",
+    image: "/assets/gallery/gallery-2-new.jpeg",
   },
   {
     title: "Curtains & Blinds",
     description: "Elevate your interiors with premium yet affordable curtain solutions. We offer artistic tailoring, high-quality railing systems, and a wide range of fabric options to match every design theme. Upgrade to advanced Italian motorized systems with up to 15 years warranty for effortless luxury.",
     icon: Blinds,
-    image: "/assets/services/curtains.jpg",
+    image: "/assets/featured/three.jpeg",
   },
   {
     title: "Kitchen",
     description: "Modern kitchens designed for functionality and style. We offer fully customized kitchen solutions with a wide variety of materials, finishes, and smart accessories to maximize space and efficiency. From contemporary to classic designs, we deliver durable, elegant kitchens tailored to your needs and budget.",
     icon: Utensils,
-    image: "/assets/services/kitchen.jpg",
+    image: "/assets/featured/six.jpeg",
   },
  
   {
     title: "Custom Sofas",
     description: "Designed for comfort and crafted for style. Our customized sofas blend modern aesthetics with durable materials, giving you the perfect balance of elegance, functionality, and long-lasting quality.",
     icon: Sofa,
-    image: "/assets/services/sofa.jpg",
+    image: "/assets/featured/one.jpeg",
   },
   {
     title: "TV Units",
     description: "Contemporary TV units designed to enhance your living space. Clean lines, smart storage, and premium finishes combine to create a stylish focal point for your home.",
     icon: Tv,
-    image: "/assets/services/tv unit.jpg",
+    image: "/assets/featured/five.jpeg",
   },
   
   {

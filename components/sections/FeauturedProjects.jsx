@@ -8,31 +8,35 @@ import SectionWrapper from "../layout/SectionWrapper";
 const projects = [
   {
     id: 1,
-    title: "Modern Minimalist Villa",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2940&auto=format&fit=crop",
+    title: "Bespoke TV Unit Design",
+    category: "Living Space",
+    image: "assets/featured/five.jpeg",
+    // Wide item in a wide box (Perfect for minimal cropping)
     colSpan: "md:col-span-2",
   },
   {
     id: 2,
-    title: "Urban Loft Workspace",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2869&auto=format&fit=crop",
+    title: "Custom Luxury Sofa",
+    category: "Furniture",
+    image: "assets/featured/one.jpeg",
+    // Wide item in a narrower box (Crucial to make the box not-too-tall)
     colSpan: "md:col-span-1",
   },
   {
     id: 3,
-    title: "Coastal Retreat",
-    category: "Residential",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop",
-    colSpan: "md:col-span-1",
+    title: "Modern Fitted Wardrobe",
+    category: "Storage Solutions",
+    image: "/assets/gallery/gallery-2-new.jpeg",
+    // Tall item in a wider box (Gives the item room to breathe)
+    colSpan: "md:col-span-2",
   },
   {
     id: 4,
-    title: "The Artisan Boutique",
-    category: "Commercial",
-    image: "https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=2940&auto=format&fit=crop",
-    colSpan: "md:col-span-2",
+    title: "Elegant Window Curtains",
+    category: "Decor & Dressings",
+    image: "assets/featured/three.jpeg",
+    // Tall item in a narrower box (Perfect for minimal cropping)
+    colSpan: "md:col-span-1",
   },
 ];
 
@@ -66,12 +70,20 @@ export default function FeaturedProjects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative group overflow-hidden rounded-xl h-[400px] cursor-pointer ${project.colSpan}`}
+              // 1. Reverted overflow-hidden to the image itself for cleaner borders.
+              // 2. Used aspect-ratios to make the grid dynamic and less boring.
+              className={`relative group overflow-hidden rounded-xl cursor-pointer ${project.colSpan}
+                ${project.colSpan === "md:col-span-2" 
+                  ? "aspect-[16/9]" // Wide aspect for col-span-2 cells
+                  : "aspect-square md:aspect-[3/4]" // Square on mobile, slightly tall on desktop for col-span-1
+                }`}
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                // 3. Changed back to object-cover to fill the container.
+                // 4. Added overflow-hidden to the image.
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 overflow-hidden"
               />
               {/* Premium dark gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
