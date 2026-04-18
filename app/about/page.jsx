@@ -13,7 +13,7 @@ export default function AboutPage() {
     <>
       <StorySection />
       <ProcessSection/>
-      <TeamSection />
+      {/* <TeamSection /> */}
       <CtaBanner />
     </>
   );
