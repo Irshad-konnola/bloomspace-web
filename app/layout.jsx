@@ -10,7 +10,32 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 
 export const metadata = {
   title: "Bloomspace | Premium Interior Design",
-  description: "High-end, elegant interior design for residential and commercial spaces.",
+  description:
+    "Bloomspace offers high-end, elegant interior design services for residential and commercial spaces. Discover timeless design tailored to your lifestyle.",
+  metadataBase: new URL("https://www.bloomspacedesign.com"), // ← required for OG image URLs to work
+  openGraph: {
+    title: "Bloomspace | Premium Interior Design",
+    description:
+      "Bloomspace offers high-end, elegant interior design services for residential and commercial spaces. Discover timeless design tailored to your lifestyle.",
+    url: "https://www.bloomspacedesign.com",
+    siteName: "Bloomspace",
+    images: [
+      {
+        url: "/og-image.png", 
+        width: 1200,
+        height: 630,
+        alt: "Bloomspace Interior Design",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bloomspace | Premium Interior Design",
+    description:
+      "High-end, elegant interior design for residential and commercial spaces.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
