@@ -2,7 +2,7 @@
 
 A premium, modern frontend website built for an interior design company, focused on clean UI, smooth animations, and conversion-driven design.
 
-🔗 **Live Demo**: https://illustrious-meringue-b785af.netlify.app/  
+🔗 **Live Demo**: https://bloomspacedesign.com/  
 
 ---
 
