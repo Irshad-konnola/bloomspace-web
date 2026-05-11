@@ -4,43 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SectionWrapper from "../layout/SectionWrapper";
+import { urlFor } from "@/lib/sanity"; // Import your image helper
 
-const projects = [
-  {
-    id: 1,
-    title: "Bespoke TV Unit Design",
-    category: "Living Space",
-    image: "assets/featured/five.jpeg",
-    // Wide item in a wide box (Perfect for minimal cropping)
-    colSpan: "md:col-span-2",
-  },
-  {
-    id: 2,
-    title: "Custom Luxury Sofa",
-    category: "Furniture",
-    image: "assets/featured/one.jpeg",
-    // Wide item in a narrower box (Crucial to make the box not-too-tall)
-    colSpan: "md:col-span-1",
-  },
-  {
-    id: 3,
-    title: "Modern Fitted Wardrobe",
-    category: "Storage Solutions",
-    image: "/assets/gallery/gallery-2-new.jpeg",
-    // Tall item in a wider box (Gives the item room to breathe)
-    colSpan: "md:col-span-2",
-  },
-  {
-    id: 4,
-    title: "Elegant Window Curtains",
-    category: "Decor & Dressings",
-    image: "assets/featured/three.jpeg",
-    // Tall item in a narrower box (Perfect for minimal cropping)
-    colSpan: "md:col-span-1",
-  },
-];
-
-export default function FeaturedProjects() {
+export default function FeaturedProjects({ projects }) { // Accept projects as prop
   return (
     <SectionWrapper className="bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -63,30 +29,26 @@ export default function FeaturedProjects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+          {projects?.map((project, index) => (
             <motion.div
-              key={project.id}
+              key={project._id} // Sanity uses _id
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              // 1. Reverted overflow-hidden to the image itself for cleaner borders.
-              // 2. Used aspect-ratios to make the grid dynamic and less boring.
-              className={`relative group overflow-hidden rounded-xl cursor-pointer ${project.colSpan}
-                ${project.colSpan === "md:col-span-2" 
-                  ? "aspect-[16/9]" // Wide aspect for col-span-2 cells
-                  : "aspect-square md:aspect-[3/4]" // Square on mobile, slightly tall on desktop for col-span-1
+              // colSpan is now dynamic from Sanity if you added it, otherwise default to logic
+              className={`relative group overflow-hidden rounded-xl cursor-pointer ${project.colSpan || (index % 3 === 0 ? "md:col-span-2" : "md:col-span-1")}
+                ${(project.colSpan === "md:col-span-2" || (index % 3 === 0))
+                  ? "aspect-video" 
+                  : "aspect-square md:aspect-3/4" 
                 }`}
             >
               <img
-                src={project.image}
+                src={urlFor(project.mainImage).url()} // Fetch URL from Sanity
                 alt={project.title}
-                // 3. Changed back to object-cover to fill the container.
-                // 4. Added overflow-hidden to the image.
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 overflow-hidden"
               />
-              {/* Premium dark gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <span className="text-brand-secondary text-sm font-medium tracking-wider uppercase mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   {project.category}
                 </span>
@@ -98,7 +60,6 @@ export default function FeaturedProjects() {
           ))}
         </div>
         
-        {/* Mobile View All Button */}
         <div className="mt-10 md:hidden text-center">
           <Link 
             href="/gallery" 
