@@ -15,6 +15,7 @@ This project emphasizes:
 - Smooth user interactions
 - Performance and responsiveness
 - Lead generation
+- Content Management Sytem
 
 ---
 
@@ -34,14 +35,15 @@ This project emphasizes:
 ## 🛠️ Tech Stack
 
 - **Framework:** Next.js 16  
-- **Frontend:** React 19  
+- **Frontend:** React 19
+- **CMS:** Sanity.io (Headless CMS for dynamic project management) 
 - **Styling:** Tailwind CSS 4  
 - **UI Components:** shadcn/ui + Radix UI  
 - **Animations:** Framer Motion  
 - **Icons:** Lucide React + Phosphor Icons  
 - **Forms:** Netlify Forms  
-- **Tracking:** Snapchat Pixel  
-
+- **Tracking:** Snapchat Pixel
+- **DevOps**: GitHub Actions (CI/CD), Netlify Build Hooks (On-demand revalidation) 
 ---
 
 ## 📸 Screenshots
@@ -63,13 +65,25 @@ This project emphasizes:
 ## 📂 Project Structure
 
 
-/app (or pages)
-/components
-/lib
-/public
-
+├── app/
+│   ├── (website)/      # Route Group for public site (Layout with Navbar/Footer)
+│   ├── admin/          # Route Group for Sanity Studio (Clean layout)
+│   └── api/            # Backend routes
+├── components/         # Reusable UI components
+├── sanity/             # Schema definitions and CMS config
+├── .github/workflows/  # CI/CD Pipeline (GitHub Actions)
+└── .env.example        # Template for environment variables
 
 ---
+
+## 🚀 Advanced DevOps Features (Add this section!)
+- **CI/CD Pipeline** Automated linting and type-checking on every Pull Request via GitHub Actions.
+
+- **Staging Environment** Automated branch deployments for testing features before production.
+
+- **On-Demand Revalidation** Real-time content updates using Sanity Webhooks and Netlify Build Hooks (ISR).
+
+- **Performance** Optimized LCP with Next.js Image component and calculated sizes props.
 
 ## ⚙️ Installation & Setup
 
