@@ -75,7 +75,7 @@ export default function ProcessSection() {
                   transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
                   className="relative flex items-start gap-8 md:gap-16 group"
                 >
-                  {/* Timeline Node & Icon */}
+                  {/* Timeline Node */}
                   <div className="relative z-10 shrink-0">
                     <div className="w-14 h-14 md:w-20 md:h-20 bg-background border border-border rounded-full flex items-center justify-center shadow-sm group-hover:border-brand-primary transition-colors duration-500">
                       <Icon className="w-6 h-6 md:w-8 md:h-8 text-brand-primary group-hover:scale-110 transition-transform duration-500" />
