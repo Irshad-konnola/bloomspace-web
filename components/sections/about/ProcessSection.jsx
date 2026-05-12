@@ -60,7 +60,7 @@ export default function ProcessSection() {
         {/* Vertical Timeline */}
         <div className="relative">
           {/* The Vertical Connecting Line */}
-          <div className="absolute left-[27px] md:left-[39px] top-0 bottom-0 w-[2px] bg-border/60" />
+          <div className="absolute left-6.75 md:left-9.75 top-0 bottom-0 w-0.5 bg-border/60" />
 
           <div className="space-y-16 md:space-y-24">
             {processSteps.map((step, index) => {
@@ -76,7 +76,7 @@ export default function ProcessSection() {
                   className="relative flex items-start gap-8 md:gap-16 group"
                 >
                   {/* Timeline Node & Icon */}
-                  <div className="relative z-10 flex-shrink-0">
+                  <div className="relative z-10 shrink-0">
                     <div className="w-14 h-14 md:w-20 md:h-20 bg-background border border-border rounded-full flex items-center justify-center shadow-sm group-hover:border-brand-primary transition-colors duration-500">
                       <Icon className="w-6 h-6 md:w-8 md:h-8 text-brand-primary group-hover:scale-110 transition-transform duration-500" />
                     </div>
