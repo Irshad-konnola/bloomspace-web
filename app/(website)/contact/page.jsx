@@ -36,11 +36,11 @@ export default function ContactPage() {
           {/* Header */}
           <div className="mb-16 md:mb-24">
             <h1 className="text-4xl md:text-6xl font-heading text-foreground font-bold tracking-tight mb-6">
-              Let's create something <br className="hidden md:block" />
+              Let&apos;s create something <br className="hidden md:block" />
               <span className="text-brand-primary">extraordinary.</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Whether you're looking to redesign a single room or undertake a
+              Whether you&apos;re looking to redesign a single room or undertake a
               full-scale renovation, our team is ready to bring your vision to
               life.
             </p>

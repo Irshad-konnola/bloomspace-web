@@ -40,6 +40,8 @@ export default function StorySection() {
               alt="Our Studio" 
               className="absolute inset-0  object-cover"
               fill
+              sizes="(max-width: 1024px) 100vw, 640px"
+              priority
             />
             <div className="absolute inset-0 bg-brand-primary/10 mix-blend-multiply" />
           </motion.div>
@@ -60,7 +62,7 @@ We are a team of highly experienced designers, skilled carpenters, tailors, and 
             <div className="pl-6 border-l-2 border-brand-primary">
               <h3 className="text-xl font-heading font-bold text-foreground mb-3">Mission & Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Our mission is to translate our clients' personalities into physical spaces. We envision a world where every interior environment not only looks breathtaking but inherently improves the daily lives of those who inhabit it.
+                Our mission is to translate our clients personalities into physical spaces. We envision a world where every interior environment not only looks breathtaking but inherently improves the daily lives of those who inhabit it.
               </p>
             </div>
           </motion.div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionWrapper from "../../layout/SectionWrapper";
+import Image from "next/image";
 
 const team = [
   {
@@ -44,14 +45,16 @@ export default function TeamSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden rounded-xl h-[450px] mb-6">
-                <img 
+              <div className="relative overflow-hidden rounded-xl h-112.5 mb-6">
+                <Image
+
                   src={member.image} 
                   alt={member.name} 
+                  fill
                   className="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-105"
                 />
                 {/* Subtle gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-foreground group-hover:text-brand-primary transition-colors">
                 {member.name}

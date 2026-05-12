@@ -59,7 +59,7 @@ export default function Testimonials() {
               className="absolute w-full px-4"
             >
               <p className="text-xl md:text-3xl font-heading text-foreground leading-relaxed mb-8 italic">
-                "{testimonials[currentIndex].text}"
+                &quot;{testimonials[currentIndex].text}&quot;
               </p>
               <div>
                 <h4 className="font-semibold text-brand-primary text-lg">
