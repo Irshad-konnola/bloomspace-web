@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SectionWrapper from "../layout/SectionWrapper";
 import { urlFor } from "@/lib/sanity"; // Import your image helper
+import Image from "next/image";
 
 export default function FeaturedProjects({ projects }) { // Accept projects as prop
   return (
@@ -43,9 +44,11 @@ export default function FeaturedProjects({ projects }) { // Accept projects as p
                   : "aspect-square md:aspect-3/4" 
                 }`}
             >
-              <img
+              <Image
                 src={urlFor(project.mainImage).url()} // Fetch URL from Sanity
                 alt={project.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 overflow-hidden"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
