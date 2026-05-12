@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import PremiumButton from "../shared/PremiumButton";
 import { trackSnapEvent } from "@/lib/tracking/snap-pixel";
+import Image from "next/image";
 
 export default function Hero() {
   const handleCTAClick = () => {
@@ -21,9 +22,10 @@ export default function Hero() {
         transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/20 to-black/80 z-10" />
-        <img
+        <Image
           src="/assets/gallery/gallery-1-new.jpeg"
           alt="Luxury Interior Design"
+          fill
           className="w-full h-full object-cover"
         />
       </motion.div>

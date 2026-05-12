@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
       
       {/* Honeypot field to prevent spam */}
       <p className="hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        <label>Don&apos;t fill this out if you&apos;re human: <input name="bot-field" /></label>
       </p>
 
       {error && (
